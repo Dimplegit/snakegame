@@ -2,7 +2,7 @@ import turtle
 import time
 import random
 
-delay = 0.1
+delay = 0.1  # Speed of snake
 paused = False  # Flag to track if the game is paused
 
 # Set up the screen
@@ -13,7 +13,7 @@ wn.setup(width=500 ,height=500)
 wn.tracer(0)
 
 # Set a background image (make sure the image is a .gif file and in the same directory)
-wn.bgpic("backrounimg.gif")  # Replace with the name of your .gif image
+wn.bgpic("bg_img.gif")  # Replace with the name of your .gif image
 
 # Creating snake head
 head = turtle.Turtle()
@@ -89,7 +89,7 @@ while True:
     # Only update the game state if not paused
     if not paused:
         # Check for the border collision
-        if head.xcor() > 560 or head.xcor() < -560 or head.ycor() > 290 or head.ycor() < -290:
+        if head.xcor() > 600 or head.xcor() < -600 or head.ycor() > 310 or head.ycor() < -310:
             time.sleep(1)
             head.goto(0, 0)
             head.direction = "stop"
